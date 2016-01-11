@@ -55,7 +55,7 @@
         console.log('Successful login for: ' + response.name);
         document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
-        uID=response.name;
+        uID=response.authResponse.name;
         console.log(uID);
       });
 
