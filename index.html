@@ -28,7 +28,7 @@
       document.getElementById('status').innerHTML = 'Please log ' +
         'into Facebook.';
     }
-  }
+  
 
   // This function is called when someone finishes with the Login
   // Button.  See the onlogin handler attached to it in the sample
@@ -59,11 +59,6 @@
   //    your app or not.
   //
   // These three cases are handled in the callback function.
-
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
-
   };
 
   // Load the SDK asynchronously
@@ -98,7 +93,7 @@ function get_like() {
       }
   );*/
 }
-
+}
   
 </script>
 
