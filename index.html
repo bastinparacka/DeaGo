@@ -57,7 +57,7 @@
         'Thanks for logging in, ' + response.name + '!';
       });
       
-      var fb_userid = response.userID;
+      var fb_userid = response.name;
       var abc = "/"+fb_userid+"/likes";
       console.log(abc);
       FB.api(abc,
