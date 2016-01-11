@@ -55,10 +55,10 @@
         console.log('Successful login for: ' + response.name);
         document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
-        uID=response.authResponse.userID;
-        console.log(uID);
+        var user_id = response.authResponse.userID;
+        console.log(user_id);
       });
-
+/*
       var abc="/"+uID+"/likes"
       console.log(abc);
       FB.api(abc,
@@ -67,7 +67,7 @@
             console.log('Getting like from' + response.authResponse.userID);
           }
         }
-      );
+      );*/
       
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
