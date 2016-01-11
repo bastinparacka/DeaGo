@@ -55,8 +55,7 @@
         console.log('Successful login for: ' + response.name);
         document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
-        var user_id = response.authResponse.userid;
-        console.log(user_id);
+        
       });
 /*
       var abc="/"+uID+"/likes"
@@ -86,6 +85,8 @@
   // code below.
   function checkLoginState() {
     FB.getLoginStatus(function(response) {
+      var user_id = response.authResponse.userID;
+      console.log('getLoginStatus'+user_id);
       statusChangeCallback(response);
     });
   }
