@@ -6,7 +6,7 @@
 </head>
 <body>
   <script>
-  
+  var uID;
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '1601573453438037',
@@ -55,10 +55,12 @@
         console.log('Successful login for: ' + response.name);
         document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
+        uID=response.userID;
       });
-      
-    // console.log(abc);
-      FB.api('/me',
+
+      var abc="/"+uID+"/likes"
+      console.log(abc);
+      FB.api(abc,
         function(response){
           if (response && !response.error) {
             console.log('Getting like from' + response.userID);
