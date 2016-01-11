@@ -17,6 +17,7 @@
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
       testAPI();
+      get_like();
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -85,6 +86,8 @@
       });
   }
   //make the API call 
+
+function get_like() {
   var fb_userid = response.id;
   abc = "/"+fb_userid+"/likes";
   FB.api( abc,
@@ -94,7 +97,7 @@
         }
       }
   );
-
+}
 
   
 </script>
