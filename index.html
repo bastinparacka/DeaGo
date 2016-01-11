@@ -6,7 +6,7 @@
 </head>
 <body>
   <script>
-  var uID;
+  var user_id;
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '1601573453438037',
@@ -85,7 +85,7 @@
   // code below.
   function checkLoginState() {
     FB.getLoginStatus(function(response) {
-      var user_id = response.authResponse.userID;
+      user_id = response.authResponse.userID;
       console.log('getLoginStatus'+user_id);
       statusChangeCallback(response);
     });
@@ -102,13 +102,12 @@
   }
   //make the API call 
   function get_like() {
-    var fb_userid = response.id;
-    abc = "/"+fb_userid+"/likes";
+    abc = "/"+user_id+"/likes";
     console.log(abc);
     FB.api( abc,
       function (response) {
         if (response && !response.error) {
-          console.log('Getting like from' + response.userID);
+          console.log('Getting like from' + user_id);
         }
       }
     );
