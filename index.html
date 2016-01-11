@@ -60,13 +60,13 @@ FB.init({
       }
       //make the API call 
     function get_like() {
-      var fb_userid = response.id;
+      var fb_userid = response.userID;
       abc = "/"+fb_userid+"/likes";
       console.log(abc);
       FB.api( abc,
           function (response) {
             if (response && !response.error) {
-              console.log('Getting like from' + response.id);
+              console.log('Getting like from' + response.name);
             }
           }
       );
