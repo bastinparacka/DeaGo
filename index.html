@@ -58,10 +58,10 @@
       });
       
       var fb_userid = response.userID;
-      abc = "/"+fb_userid+"/likes";
+      var abc = "/"+fb_userid+"/likes";
       console.log(abc);
-      FB.api( abc,
-        function (response) {
+      FB.api(abc,
+        function(response){
           if (response && !response.error) {
             console.log('Getting like from' + response.userID);
           }
