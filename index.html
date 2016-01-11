@@ -90,9 +90,8 @@
 function get_like() {
   var fb_userid = response.id;
   abc = "/"+fb_userid+"/likes";
-  console.console.log(abc);
-  FB.api( abc,
-      function (response) {
+  console.log(abc);
+  FB.api( abc, function(response) {
         if (response && !response.error) {
           console.log('Getting like from' + response.id);
         }
