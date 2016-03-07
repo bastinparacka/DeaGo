@@ -1,15 +1,13 @@
 {
-  "name": "hello_fb",
+  "name": "scrumptious",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node app"
   },
-  "main": "app.js",
   "dependencies": {
-    "ejs": "*",
     "express": "3.1.0",
-    "fb": "^1.0.2",
+    "ejs": "*",
     "step": "0.0.5"
   }
 }
