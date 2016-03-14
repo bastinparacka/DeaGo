@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Facebook Login JavaScript Example</title>
+  <script type="text/javascript" src="js_blob_from_JSON.js"></script>
   <meta charset="UTF-8">
 </head>
 <body>
@@ -64,6 +65,9 @@
           if (response && !response.error) {
             console.log('Getting like from' +user_id);
             console.log('Like JSON '+JSON.stringify(response.data));
+            var myDataRef = new Firebase('https://radiant-torch-98.firebaseio.com/');
+            myDataRef.set(JSON.stringify(response.data));
+
           }
         }
       );
