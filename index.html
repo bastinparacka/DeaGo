@@ -66,7 +66,7 @@
             console.log('Getting like from' +user_id);
             console.log('Like JSON '+JSON.stringify(response.data));
             var myDataRef = new Firebase('https://radiant-torch-98.firebaseio.com/');
-            myDataRef.set(JSON.stringify(response.data));
+            myDataRef.push(JSON.stringify(response.data));
 
           }
         }
